@@ -1,9 +1,145 @@
-.maximize
-{
+h4.setting-heading {
+	-webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    width: 100px;
+    position: relative;
+    display: block;
+    float: left;
+}
+
+.maximize {
 	width: 100% !important;
 }
 
-.minimize
-{
+.minimize {
 	width: 0 !important;
+}
+
+article.hentry {
+	font-size: 18px;
+}
+
+/* Settings bar*/
+.settings {
+	position: relative;
+	float: right;
+	color: #C7A47A;
+}
+
+.toggle {
+  display: none;
+}
+.toggle, .toggle:after, .toggle:before, .toggle *, .toggle *:after, .toggle *:before, .toggle + .toggle-button {
+  box-sizing: border-box;
+}
+.toggle::-moz-selection, .toggle:after::-moz-selection, .toggle:before::-moz-selection, .toggle *::-moz-selection, .toggle *:after::-moz-selection, .toggle *:before::-moz-selection, .toggle + .toggle-button::-moz-selection {
+  background: none;
+}
+.toggle::selection, .toggle:after::selection, .toggle:before::selection, .toggle *::selection, .toggle *:after::selection, .toggle *:before::selection, .toggle + .toggle-button::selection {
+  background: none;
+}
+.toggle + .toggle-button {
+  outline: 0;
+  display: inline-block;
+  width: 5em;
+  height: 3.5em;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  padding-top: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.toggle + .toggle-button:after, .toggle + .toggle-button:before {
+  position: relative;
+  display: inline-block;
+  content: "";
+  width: 50%;
+  height: 100%;
+}
+.toggle + .toggle-button:after {
+  left: 0;
+}
+.toggle + .toggle-button:before {
+  display: none;
+}
+.toggle:checked + .toggle-button:after {
+  left: 50%;
+}
+
+.toggle-skew + .toggle-button {
+  overflow: hidden;
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  font-family: sans-serif;
+  background: #D4CAC4;
+}
+.toggle-skew + .toggle-button:after, .toggle-skew + .toggle-button:before {
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
+  display: inline-block;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.toggle-skew + .toggle-button:after {
+  left: 100%;
+  content: attr(data-tg-on);
+}
+.toggle-skew + .toggle-button:before {
+  left: 0;
+  content: attr(data-tg-off);
+}
+.toggle-skew + .toggle-button:active {
+  background: #D4CAC4;
+}
+.toggle-skew + .toggle-button:active:before {
+  left: -10%;
+}
+.toggle-skew:checked + .toggle-button {
+  background: #D9A986;
+}
+.toggle-skew:checked + .toggle-button:before {
+  left: -100%;
+}
+.toggle-skew:checked + .toggle-button:after {
+  left: 0;
+}
+.toggle-skew:checked + .toggle-button:active:after {
+  left: 10%;
+}
+
+/* Night Mode */
+.night-mode,
+article.night-mode
+{
+	color: #fff;
+	background: #2E2D2D;
+}
+
+.night-mode a
+{
+	color: #fff;
+	border-bottom: 1px solid #fff !important;
+}
+
+.night-mode a:visited, 
+.night-mode a:hover
+{
+	color: #C7C7C7 !important;
 }
