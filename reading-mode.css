@@ -1,31 +1,36 @@
 h4.setting-heading {
-	-webkit-margin-after: 0;
-    -webkit-margin-before: 0;
-    -webkit-margin-start: 0;
-    -webkit-margin-end: 0;
-    width: 100px;
-    position: relative;
-    display: block;
-    float: left;
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  width: 100px;
+  position: relative;
+  display: block;
+  float: left;
 }
 
 .maximize {
-	width: 100% !important;
+  width: 100% !important;
+}
+
+.maximize .chapterBtn {
+  left: 0;
+  float: right;
 }
 
 .minimize {
-	width: 0 !important;
+  width: 0 !important;
 }
 
 article.hentry {
-	font-size: 18px;
+  font-size: 18px;
 }
 
 /* Settings bar*/
 .settings {
-	position: relative;
-	float: right;
-	color: #C7A47A;
+  position: relative;
+  float: right;
+  color: #C7A47A;
 }
 
 .toggle {
@@ -51,9 +56,9 @@ article.hentry {
   padding-top: 10px;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .toggle + .toggle-button:after, .toggle + .toggle-button:before {
   position: relative;
@@ -75,9 +80,9 @@ article.hentry {
 .toggle-skew + .toggle-button {
   overflow: hidden;
   -webkit-transform: skew(-10deg);
-          transform: skew(-10deg);
+  transform: skew(-10deg);
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   font-family: sans-serif;
@@ -85,7 +90,7 @@ article.hentry {
 }
 .toggle-skew + .toggle-button:after, .toggle-skew + .toggle-button:before {
   -webkit-transform: skew(10deg);
-          transform: skew(10deg);
+  transform: skew(10deg);
   display: inline-block;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
@@ -125,21 +130,36 @@ article.hentry {
 }
 
 /* Night Mode */
-.night-mode,
-article.night-mode
-{
-	color: #fff;
-	background: #2E2D2D;
+.night-mode article,
+.night-mode aside,
+.night-mode header,
+.night-mode #comments,
+.night-mode .stacked-list-item,
+#colophon.night-mode {
+  color: #fff;
+  background: #2E2D2D;
 }
 
-.night-mode a
-{
-	color: #fff;
-	border-bottom: 1px solid #fff !important;
+.night-mode .stacked-list {
+	border: 0;	
+}
+
+.night-mode .stacked-list-item:hover {
+	background-color: #CDC6BE;
+}
+
+.night-mode .chapterBtn,
+.night-mode #showcomments > a {
+  background: #383838;
+}
+
+.night-mode a {
+  color: #fff;
+  border-bottom: 1px solid #fff !important;
 }
 
 .night-mode a:visited, 
-.night-mode a:hover
-{
-	color: #C7C7C7 !important;
+.night-mode a:focus,
+.night-mode a:hover {
+  color: #C7C7C7 !important;
 }

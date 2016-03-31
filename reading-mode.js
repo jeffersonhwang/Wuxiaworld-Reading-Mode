@@ -55,15 +55,19 @@ function removeClassFromElements(elements, cls)
 
 var nightClass = "night-mode";
 function toggleNightMode(e, inNightMode) {
-	var articles = document.getElementsByTagName("article");
+	var main = document.getElementById("main");
 	var toggle = document.getElementsByClassName("toggle-button")[0];
+	var footer = document.getElementById("colophon");
+	var secondary = document.getElementById("secondary");
 	
 	var e = e || event;
 	if (e)
 		inNightMode = e.target.checked;
 	
 	if (inNightMode) {
-		addClassToElements(articles, nightClass);
+		footer.classList.add(nightClass);
+		main.classList.add(nightClass);
+		secondary.classList.add(nightClass);
 		// handles when night mode is enabled and page is reloaded
 		if (!e) {
 			var input = document.getElementById("nightModeToggle");
@@ -71,7 +75,9 @@ function toggleNightMode(e, inNightMode) {
 		}
 	}
 	else {
-		removeClassFromElements(articles, nightClass);
+		footer.classList.remove(nightClass);
+		main.classList.remove(nightClass);
+		secondary.classList.remove(nightClass);
 	}
 	
 
