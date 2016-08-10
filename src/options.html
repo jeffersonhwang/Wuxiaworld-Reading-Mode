@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wuxiaworld: Reading Mode Options</title>
+		<link rel="stylesheet" href="css/options.css" />
+	</head>
+	<body>
+		<h1>Options</h1>
+		<div>
+			<h2>Reading Mode:</h2>
+			<div class="settings" title="Settings">
+				<div class="toggleContainer">
+					<input class="toggle toggle-skew" id="readingModeToggle" type="checkbox">
+					<label class="toggle-button" data-tg-off="OFF" data-tg-on="ON" for="readingModeToggle"></label>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h2>Dark Layout:</h2>
+			<div class="settings" title="Settings">
+				<div class="toggleContainer">
+					<input class="toggle toggle-skew" id="nightModeToggle" type="checkbox">
+					<label class="toggle-button" data-tg-off="OFF" data-tg-on="ON" for="nightModeToggle"></label>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h2>Font size:</h2>
+			<input id="fontSize" type="number" name="font-size" min="0" value="16"/> <b>px</b>
+		</div>
+		<div>
+			<button id="save" type="submit">Save</button>
+			<span id="status"></span>
+		</div>
+		<script src="js/options.js"></script>
+	</body>
+</html>

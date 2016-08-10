@@ -1,0 +1,69 @@
+h4.setting-heading {
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  width: 100px;
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.maximize {
+  width: 100% !important;
+}
+
+.maximize .chapterBtn {
+  left: 0;
+  float: right;
+}
+
+.minimize {
+  width: 0 !important;
+}
+
+article.hentry {
+  /*font-size: 18px;*/
+}
+
+
+/* Night Mode */
+.night-mode article,
+.night-mode aside,
+.night-mode header,
+.night-mode #comments,
+.night-mode .stacked-list-item,
+#colophon.night-mode {
+  color: #fff;
+  background: #2E2D2D;
+}
+
+.night-mode .stacked-list {
+	border: 0;	
+}
+
+.night-mode .stacked-list-item:hover {
+	background-color: #CDC6BE;
+}
+
+.night-mode .chapterBtn,
+.night-mode #showcomments > a {
+  background: #383838;
+}
+
+.night-mode a {
+  color: #fff;
+  border-bottom: 1px solid #fff !important;
+}
+
+.night-mode a:visited, 
+.night-mode a:focus,
+.night-mode a:hover {
+  color: #C7C7C7 !important;
+}
+
+@media only screen and (max-width: 1223px) {
+  #page {
+    width: 100% !important;
+  }
+}

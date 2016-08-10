@@ -1,10 +1,11 @@
 {
   "manifest_version": 2,
-
   "name": "Wuxiaworld: Reading Mode",
   "description": "This extension maximizes the reading area on www.wuxiaworld.com.",
-  "version": "1.1",
-
+  "version": "2.0.0",
+  "icons": {
+    "128": "icon.png"
+  },
   "browser_action": {
     "default_icon": "icon.png",
     "default_title": "Wuxiaworld: Reading Mode"
@@ -12,16 +13,20 @@
   "permissions": [
     "activeTab",
     "storage",
+    "unlimitedStorage",
     "http://www.wuxiaworld.com/*"
   ],
-  "background":{
-    "scripts": ["background.js"],
-    "persistent": false
+  "background": {
+    "scripts": ["src/js/install.js"]
   },
   "content_scripts": [{
     "matches": ["http://www.wuxiaworld.com/*"],
     "run_at": "document_start",
-    "js": ["reading-mode.js"],
-    "css": ["reading-mode.css"]
-    }]
+    "js": ["src/js/reading-mode.js"],
+    "css": ["src/css/reading-mode.css"]
+    }],
+  "options_ui": {
+    "page": "src/options.html",
+    "chrome_style": true
+  }
 }
