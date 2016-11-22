@@ -9,7 +9,7 @@ function toggleReadingMode(inReadingMode) {
 	var primary = document.getElementById("primary");
 	var secondary = document.getElementById("secondary");
 	var articles = document.getElementsByTagName("article");
-	var footer = document.getElementById("colophon");
+	var footer = document.getElementById("footer-wide");
 	var comments = document.getElementById("comments");
 
 	if (inReadingMode) {
@@ -46,7 +46,7 @@ function removeClassFromElements(elements, cls)
 
 function toggleNightMode(inNightMode) {
 	var main = document.getElementById("main");
-	var footer = document.getElementById("colophon");
+	var footer = document.getElementById("footer-wide");
 	var secondary = document.getElementById("secondary");
 	
 	var nightClass = "night-mode";

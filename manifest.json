@@ -20,7 +20,7 @@
     "scripts": ["src/js/install.js"]
   },
   "content_scripts": [{
-    "matches": ["http://www.wuxiaworld.com/*"],
+    "matches": ["http://www.wuxiaworld.com/*/*"],
     "run_at": "document_start",
     "js": ["src/js/reading-mode.js"],
     "css": ["src/css/reading-mode.css"]
